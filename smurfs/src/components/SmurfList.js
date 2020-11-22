@@ -16,7 +16,7 @@ const SmurfDiv = styled.div`
 width: 600px;
 flex-direction: column;
 display: inline-flex;
-margin: 20px;
+margin: 10px;
 justify-content: center;
 justify-content: space-between;
 text-align: center;
