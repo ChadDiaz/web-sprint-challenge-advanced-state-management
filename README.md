@@ -23,11 +23,19 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
-1. What problem does the context API help solve?
-2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
-3. What is the difference between Application state and Component state? When would be a good time to use one over the other?
-4. Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
-5. What is your favorite state management system you've learned and this sprint? Please explain why!
+1.	What problem does the context API help solve?
+o	it solves the prop drilling problem, by making states globally accessable.
+2.	In your own words, describe actions, reducers and the store and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+o	actions make changing the state easy, so that you don't have to remember how the reducer is set up aside from what changes it is capable of
+o	reducers create a unified front for how the state changes. this makes it so that you can know ahead of time that if you give it input A, it will always provide output B.
+o	store allows for the state is untouchable apart from the reducer that is provided. ensuring immutable data
+3.	What is the difference between Application state and Component state? When would be a good time to use one over the other?
+o	Application state is a state that is used throughout the application, such as a user login token, or a shopping cart. Component state is state that is only used in a single place, and does not need to be available to any other components, such as a state that stores an input's change.
+4.	Describe redux-thunk, what does it allow us to do? How does it change our action-creators?
+o	redux-thunk is a middleware that allows for direct dispatch access in an action, so that you can call multiple reducer actions with a single action-creator
+5.	What is your favorite state management system you've learned and this sprint? Please explain why!
+o	I really like redux, as I like the private nature of the reducer being the only thing able to change the state, though I can see how context can be used for smaller pieces of application data
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
